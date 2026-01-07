@@ -11,6 +11,7 @@ El problema a resolver consiste en encontrar la máxima cantidad de rectángulos
 ## 🚀 Cómo Empezar
 
 ### Opción 1: Solución en TypeScript
+
 ```bash
 cd typescript
 npm install
@@ -18,6 +19,7 @@ npm start
 ```
 
 ### Opción 2: Solución en Python
+
 ```bash
 cd python
 python3 main.py
@@ -26,6 +28,7 @@ python3 main.py
 ## ✅ Casos de Prueba
 
 Tu solución debe pasar los siguientes casos de prueba:
+
 - Paneles 1x2 y techo 2x4 ⇒ Caben 4
 - Paneles 1x2 y techo 3x5 ⇒ Caben 7
 - Paneles 2x2 y techo 1x10 ⇒ Caben 0
@@ -43,20 +46,47 @@ Deja acá el link a tu video explicando tu solución con tus palabras
 Si completaste alguno de los ejercicios bonus, explica tu solución aquí:
 
 ### Bonus Implementado
-*[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]*
 
-
-
+_[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]_
 
 ### Explicación del Bonus
-*[Explica cómo adaptaste tu algoritmo para resolver el bonus]*
 
-
-
+_[Explica cómo adaptaste tu algoritmo para resolver el bonus]_
 
 ---
 
 ## 🤔 Supuestos y Decisiones
 
-*[Si tuviste que tomar algún supuesto o decisión de diseño, explícalo aquí]*
+1. Los paneles son rígidos
 
+- No se pueden cortar ni deformar.
+
+- Todos los paneles tienen exactamente las mismas dimensiones.
+
+2. Los paneles pueden rotarse
+
+- Se permite rotación de 90°.
+
+- No se consideran rotaciones arbitrarias (ángulos no rectos).
+
+3. El techo es un rectángulo perfecto
+
+- No hay obstáculos, pendientes ni irregularidades.
+
+- Todo el espacio del rectángulo es utilizable.
+
+4. Los paneles no pueden superponerse
+
+- Cada panel ocupa un área exclusiva del techo.
+
+5. Las dimensiones son números enteros
+
+- Se asume que todas las medidas son enteras o se comportan como tales.
+
+- Se usa división entera (floor) para calcular cuántos paneles caben.
+
+6. No se consideran espacios residuales complejos
+
+- No se rellenan huecos irregulares.
+
+- Solo se trabaja con sub-rectángulos completos.
